@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<style>
+		body {
+		  font-family: "Montserrat", sans-serif;
+		}
+	  </style>
+</head>
+<body>
+    <h1>Results</h1>
+
+    <div style="width:50%; float:left;">
+        <h2>Damage Trend</h2>
+        <canvas id="damage-chart" width="1000" height="1000"></canvas>
+    </div>
+
+    <div style="width:50%; float:right;">
+        <h2>Kills Trend</h2>
+        <canvas id="kills-chart" width="1000" height="1000"></canvas>
+    </div>
+
+    <div style="width:50%; float:right;">
+        <h2>Assists Trend</h2>
+        <canvas id="assists-chart" width="1000" height="1000"></canvas>
+    </div>
+
+    <div style="width:50%; float:right;">
+        <h2>DBNOs Trend</h2>
+        <canvas id="dbnos-chart" width="1000" height="1000"></canvas>
+    </div>
+
+    <script>
+        // Parse the chart data from the context and initialize each chart
+        var damageChartData = JSON.parse('{{ damage_trend_data|escapejs }}');
+        var damageChartCtx = document.getElementById('damage-chart').getContext('2d');
+        var damageChart = new Chart(damageChartCtx, {
+            type: 'line',
+            data: damageChartData,
+            options: {
+                responsive: false,
+                scales: {
+                    xAxes: [{
+                        type: 'time',
+                        time: {
+                            unit: 'day',
+                            displayFormats: {
+                                day: 'MMM D'
+                            }
+                        },
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Date'
+                        }
+                    }],
+                    yAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Average Damage'
+                        }
+                    }]
+                },
+                title: {
+                    display: true,
+                    text: 'Trend for Average Damage by Player Name'
+                }
+            }
+        });
+
+        var killsChartData = JSON.parse('{{ kills_trend_data|escapejs }}');
+        var killsChartCtx = document.getElementById('kills-chart').getContext('2d');
+        var killsChart = new Chart(killsChartCtx, {
+            type: 'line',
+            data: killsChartData,
+            options: {
+                responsive: false,
+                scales: {
+                    xAxes: [{
+                        type: 'time',
+                        time: {
+                            unit: 'day'
+                        }
+                    }],
+                    yAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Kills'
+                        }
+                    }]
+                },
+                title: {
+                    display: true,
+                    text: 'Trend for Kills by Player Name'
+                }
+            }
+        });
+
+        var assistsChartData = JSON.parse('{{ assists_trend_data|escapejs }}');
+        var assistsChartCtx = document.getElementById('assists-chart').getContext('2d');
+        var assistsChart = new Chart(assistsChartCtx, {
+            type: 'line',
+            data: assistsChartData,
+            options: {
+                responsive: false,
+                scales: {
+                    xAxes: [{
+                        type: 'time',
+                        time: {
+                            unit: 'day'
+                        }
+                    }],
+                    yAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Assists'
+                        }
+                    }]
+                },
+                title: {
+                    display: true,
+                    text: 'Trend for Assists by Player Name'
+                }
+            }
+        });
+
+		var dbnosChartData = JSON.parse('{{ dbnos_trend_data|escapejs }}');
+        var dbnosChartCtx = document.getElementById('dbnos-chart').getContext('2d');
+        var dbnosChart = new Chart(dbnosChartCtx, {
+            type: 'line',
+            data: dbnosChartData,
+            options: {
+                responsive: false,
+                scales: {
+                    xAxes: [{
+                        type: 'time',
+                        time: {
+                            unit: 'day'
+                        }
+                    }],
+                    yAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Dbnos'
+                        }
+                    }]
+                },
+                title: {
+                    display: true,
+                    text: 'Trend for Dbnos by Player Name'
+                }
+            }
+        });
+	</script>
+</body>
+</html>

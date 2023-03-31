@@ -1,0 +1,11 @@
+.custom-progress-bar {
+    height: 20px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .progress-bar {
+    background-color: green;
+    height: 100%;
+  }
+  
