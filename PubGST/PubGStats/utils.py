@@ -1,26 +1,5 @@
-import tkinter as tk
+
 import datetime
-
-def display_popup(entries_created):
-    # create a popup window
-    popup_window = tk.Tk()
-
-    # set the title of the window
-    popup_window.title("Popup Window")
-
-    # set the size of the window
-    popup_window.geometry("300x200")
-
-    # add some text to the window
-    if entries_created:
-        popup_text = tk.Label(popup_window, text="Entries added to the db")
-    else:
-        popup_text = tk.Label(popup_window, text="Entries were not added to the db")
-    popup_text.pack()
-
-    # run the window
-    popup_window.mainloop()
-
 
 def convert_utc_to_cvt(utc_timestamp):
     from datetime import datetime, timedelta
