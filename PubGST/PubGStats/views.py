@@ -2,7 +2,6 @@
 
 import io
 import datetime
-import tkinter as tk
 import sys
 import json
 import datetime
