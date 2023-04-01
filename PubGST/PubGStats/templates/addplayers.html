@@ -7,14 +7,6 @@
 </head>
 
 <body>
-  <style nonce="csp-nonce">
-  form {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-  }
-</style>
 
 <form method="post" action="{% url 'addplayers' %}">
   {% csrf_token %}
