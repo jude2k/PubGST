@@ -35,7 +35,8 @@ CSP_DEFAULT_SRC = ("'self'",)
 CSP_SCRIPT_SRC = ("'self'", "https://maxcdn.bootstrapcdn.com/", "https://ajax.googleapis.com/", "https://cdnjs.cloudflare.com/")
 CSP_OBJECT_SRC = ("'none'",)
 CSP_BASE_URI = ("'self'",)
-CSP_FRAME_SRC = ("'self'", "https://maxcdn.bootstrapcdn.com/", "https://ajax.googleapis.com/", "https://cdnjs.cloudflare.com/")
+CSP_FRAME_SRC = ("'self'",)
+CSP_STYLE_SRC = ("'self'", "https://maxcdn.bootstrapcdn.com/", "https://cdnjs.cloudflare.com/")
 
 
 # Application definition
