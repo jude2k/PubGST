@@ -3,32 +3,39 @@
 <head>
     <title>Results</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-	<style>
-		body {
-		  font-family: "Montserrat", sans-serif;
-		}
-	  </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <style>
+        body {
+          font-family: "Montserrat", sans-serif;
+        }
+        .chart-container {
+            width: 50%;
+            float: right;
+        }
+        h2 {
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
     <h1>Results</h1>
 
-    <div style="width:50%; float:left;">
+    <div class="chart-container">
         <h2>Damage Trend</h2>
         <canvas id="damage-chart" width="600" height="600"></canvas>
     </div>
 
-    <div style="width:50%; float:right;">
+    <div class="chart-container">
         <h2>Kills Trend</h2>
         <canvas id="kills-chart" width="600" height="600"></canvas>
     </div>
 
-    <div style="width:50%; float:right;">
+    <div class="chart-container">
         <h2>Assists Trend</h2>
         <canvas id="assists-chart" width="600" height="600"></canvas>
     </div>
 
-    <div style="width:50%; float:right;">
+    <div class="chart-container">
         <h2>DBNOs Trend</h2>
         <canvas id="dbnos-chart" width="600" height="600"></canvas>
     </div>
