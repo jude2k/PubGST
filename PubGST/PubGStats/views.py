@@ -1,6 +1,7 @@
 # views.py
 
 import io
+import os
 import datetime
 import sys
 import json
@@ -8,7 +9,7 @@ import datetime
 import pandas as pd
 
 
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from django import forms
 from django.http import HttpResponse
 from django.http import JsonResponse
@@ -166,7 +167,7 @@ def generate_dbnos_trend(data):
 
 
 def run_script(data):
-    api_key = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJmNTNiNWI1MC03ZjA2LTAxM2ItNWIwYS00MzEzOWVkOWU4NmYiLCJpc3MiOiJnYW1lbG9ja2VyIiwiaWF0IjoxNjc0NjY5MTQ4LCJwdWIiOiJibHVlaG9sZSIsInRpdGxlIjoicHViZyIsImFwcCI6ImJvZ2RhbmFwcCJ9.saoty3AwtsqfJFVxvssaU1oUJS8jNLC22fCOf7exC5o"
+    api_key = os.environ.get('PUBG_API_KEY')
     pubg = PUBG(api_key=api_key, shard="steam")
 
     # Creates a Players instance (iterable of Player instances)
