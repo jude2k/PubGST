@@ -73,7 +73,7 @@ TEMPLATES = [
         },
     },
 ]
-CORS_ALLOWED_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = True
 WSGI_APPLICATION = 'PubGST.wsgi.application'
 
 ALLOWED_HOSTS = []
