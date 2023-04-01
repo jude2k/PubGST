@@ -32,10 +32,10 @@ SECURE_HSTS_SECONDS = 31536000
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_HSTS_PRELOAD = True
 CSP_DEFAULT_SRC = ("'self'",)
-CSP_SCRIPT_SRC = ("'self'", "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css", "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js", "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js")
+CSP_SCRIPT_SRC = ("'self'", "https://maxcdn.bootstrapcdn.com/", "https://ajax.googleapis.com/", "https://cdnjs.cloudflare.com/")
 CSP_OBJECT_SRC = ("'none'",)
 CSP_BASE_URI = ("'self'",)
-CSP_FRAME_SRC = ("'self'", "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css", "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js", "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js")
+CSP_FRAME_SRC = ("'self'", "https://maxcdn.bootstrapcdn.com/", "https://ajax.googleapis.com/", "https://cdnjs.cloudflare.com/")
 
 
 # Application definition
