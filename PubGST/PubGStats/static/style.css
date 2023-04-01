@@ -30,3 +30,16 @@ button[type=submit] {
 button[type=submit]:hover {
     background-color: #3e8e41;
 }
+
+
+body {
+    font-family: "Montserrat", sans-serif;
+  }
+  .chart-container {
+      width: 50%;
+      float: right;
+  }
+  h2 {
+      margin-top: 50px;
+  }
+  
