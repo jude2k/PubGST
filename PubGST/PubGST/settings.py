@@ -36,7 +36,7 @@ CSP_SCRIPT_SRC = ("'self'", "https://maxcdn.bootstrapcdn.com/", "https://ajax.go
 CSP_OBJECT_SRC = ("'none'",)
 CSP_BASE_URI = ("'self'",)
 CSP_FRAME_SRC = ("'self'",)
-CSP_STYLE_SRC = ("'self'", "https://maxcdn.bootstrapcdn.com/", "https://cdnjs.cloudflare.com/")
+CSP_STYLE_SRC = ("'self'", "https://fonts.googleapis.com/","https://maxcdn.bootstrapcdn.com/", "https://cdnjs.cloudflare.com/")
 
 
 # Application definition
@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'PubGStats.apps.PubgstatsConfig',
     'bootstrap4',
     'corsheaders',
+    
 ]
 
 MIDDLEWARE = [
