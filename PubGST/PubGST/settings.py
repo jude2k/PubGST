@@ -31,12 +31,7 @@ ALLOWED_HOSTS = []
 SECURE_HSTS_SECONDS = 31536000
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_HSTS_PRELOAD = True
-CSP_DEFAULT_SRC = ("'self'",)
-CSP_SCRIPT_SRC = ("'self'", "https://maxcdn.bootstrapcdn.com/", "https://ajax.googleapis.com/", "https://cdnjs.cloudflare.com/")
-CSP_OBJECT_SRC = ("'none'",)
-CSP_BASE_URI = ("'self'",)
-CSP_FRAME_SRC = ("'self'",)
-CSP_STYLE_SRC = ("'self'", "https://fonts.googleapis.com/","https://maxcdn.bootstrapcdn.com/", "https://cdnjs.cloudflare.com/")
+
 
 
 # Application definition
@@ -49,7 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'PubGStats.apps.PubgstatsConfig',
     'bootstrap4',
-    'corsheaders',
+    
     
 ]
 
@@ -61,8 +56,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
-    'csp.middleware.CSPMiddleware',
     
 ]
 
